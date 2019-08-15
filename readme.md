@@ -192,12 +192,12 @@ Make sure this code runs too!
 
 #### Getting into BCrypt
 
-Check out [bcrypt on npmjs.com](https://www.npmjs.com/package/bcrypt). There are several uses shown here. The main decision to make is whether to use synchronous or asynchronous versions of the methods. Asynchronous is typically recommended for servers because hashing is CPU-intensive, but for our purposes, the synchronous methods will do just fine.
+Check out [bcrypt on npmjs.com](https://www.npmjs.com/package/bcryptjs). There are several uses shown here. The main decision to make is whether to use synchronous or asynchronous versions of the methods. Asynchronous is typically recommended for servers because hashing is CPU-intensive, but for our purposes, the synchronous methods will do just fine.
 
 > NOTE: In the example below, normally this is the point where you'd save the hashed password to your database, but in this case we'll just store it in a local variable called `hashedPassword` instead.
 
 ```javascript
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var saltRounds = 10;
 var myPlaintextPassword = 'password';
 var someOtherPlaintextPassword = 'not_password';
