@@ -1,6 +1,12 @@
 # What is BCrypt?
 
-[BCrypt](https://en.wikipedia.org/wiki/Bcrypt) is a password hashing function. This is a process where you take sensitive data and scramble it with an algorithm. We don't need to know the implementation of this algorithm. BCrypt has been used since 1999, and has implementations in many languages, so we know it's trustworthy at this point!
+[BCrypt](https://en.wikipedia.org/wiki/Bcrypt) is a password hashing function. This is a process where you take sensitive data and scramble it with an algorithm. We don't need to know the implementation of this algorithm. BCrypt is based on the Blowfish cipher and has been used since 1999, and has implementations in many languages, so we know it's trustworthy at this point! Wikipedia says the following:
+
+```
+"Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power."
+```
+
+In other words, this algorithm is reliable and we can adjust how rigorously it works, so it has staying power even as computers become more advanced.
 
 ## Directions
 
@@ -192,7 +198,7 @@ Make sure this code runs too!
 
 #### Getting into BCrypt
 
-Check out [bcrypt on npmjs.com](https://www.npmjs.com/package/bcryptjs). There are several uses shown here. The main decision to make is whether to use synchronous or asynchronous versions of the methods. Asynchronous is typically recommended for servers because hashing is CPU-intensive, but for our purposes, the synchronous methods will do just fine.
+Check out [bcryptjs on npmjs.com](https://www.npmjs.com/package/bcryptjs). There are several uses shown here. The main decision to make is whether to use synchronous or asynchronous versions of the methods. Asynchronous is typically recommended for servers because hashing is CPU-intensive, but for our purposes, the synchronous methods will do just fine.
 
 > NOTE: In the example below, normally this is the point where you'd save the hashed password to your database, but in this case we'll just store it in a local variable called `hashedPassword` instead.
 
@@ -246,4 +252,5 @@ Now that you have the tools to read text from the command line with readline-syn
 * [Understanding Hashes](https://www.wordfence.com/learn/how-passwords-work-and-cracking-passwords/)
 * [Bcrypt Salts](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
 * [Readline-Sync](https://www.npmjs.com/package/readline-sync)
+* [BCryptJS on NPM](https://www.npmjs.com/package/bcryptjs)
 * [Interactive Node Programs](https://flaviocopes.com/node-input-from-cli/)
