@@ -1,7 +1,10 @@
 Answers
 
-Your name:
+Your name: Sharon
 
-Your hashed name (first time):
+Your hashed name (first time): 3012ff
+19-8-1-18-15-14
+3-0-1-2-7-6
+3-0-1-2-f-f
 
-Your hashed name (second time):
+Your hashed name (second time):3012ff
